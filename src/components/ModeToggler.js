@@ -1,9 +1,18 @@
+import { useContext } from "react";
+import { ThemeContext } from "../themeContext";
+
 const ModeToggler = () => {
+  const { theme, toggleTheme } = useContext(ThemeContext);
   return (
     <section className="mode-toggler">
       <h3>Enable Dark Mode?</h3>
       <div className="toggle toggle--knob">
-        <input type="checkbox" id="toggle--knob" className="toggle--checkbox" />
+        <input
+          type="checkbox"
+          id="toggle--knob"
+          className={`toggle--checkbox ${theme}-theme`}
+          onClick={toggleTheme}
+        />
         <label className="toggle--btn" htmlFor="toggle--knob">
           <span
             className="toggle--feature"

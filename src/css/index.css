@@ -126,16 +126,16 @@ DARK MODE STYLES
 --------------------------------------------------------------------------------
 */
 
-.darkmode {
+.dark-theme {
   background: var(--dark-bg);
   color: var(--color-text-body);
 }
 
-.darkmode .search-form input {
+.dark-theme .search-form input {
   background: var(--dark-bg-input);
   color: var(--color-text-input);
 }
 
-.darkmode .img-properties a {
+.dark-theme .img-properties a {
   color: var(--color-text-body);
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Gallery from "./Gallery";
+import SearchField from "./SearchField";
 
 const Main = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -24,21 +25,7 @@ const Main = () => {
 
   return (
     <main>
-      <section className="search" id="search">
-        <h1 id="heading">What pictures would you like to see?</h1>
-
-        <form className="search-form">
-          <input
-            type="text"
-            name="search"
-            id="search"
-            className="search-input"
-          />
-          <button type="submit" className="submit-btn" id="submit-button">
-            Search
-          </button>
-        </form>
-      </section>
+      <SearchField />
 
       <Gallery isLoaded={isLoaded} items={items} />
 
